@@ -31,6 +31,7 @@ const MENU = [
           "1x carne (blend da casa) de 180g;",
           "coroa de bacon recheada com cebola;",
           "muçarela derretida e maionese defumada;",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
         ],
       },
       {
@@ -47,6 +48,7 @@ const MENU = [
           "molho de maionese especial;",
           "Alface americano;",
           "Cobertura de camarão ao alho e azeite;",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
         ],
       },
       {
@@ -66,6 +68,7 @@ const MENU = [
           "Picles;",
           "Cebola;",
           "Molho da casa;",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
         ],
       },
       {
@@ -81,6 +84,7 @@ const MENU = [
           "1x blend bovino de 180 grs;",
           "Queijo muçarela empanada;",
           "Molho de tomate apimentando e manjericão;",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
         ],
       },
       {
@@ -98,6 +102,7 @@ const MENU = [
           "Cebola caramelizada;",
           "Rúcula;",
           "Geleia de pimenta;",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
         ],
       },
       {
@@ -112,6 +117,7 @@ const MENU = [
           "Pão brioche;",
           "1x burguer de 140g;",
           "Queijo prato;",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
         ],
       },
       {
@@ -130,6 +136,7 @@ const MENU = [
           "Cebola roxa;",
           "Picles;",
           "Alface americana;",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
         ],
       },
       
@@ -150,6 +157,7 @@ const MENU = [
           "mix de queijos muzzarela e prato derretidos;",
           "cebola roxa;",
           "alface americano;",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
         ],
       },
 
@@ -166,6 +174,7 @@ const MENU = [
           "blend bovino de 180g;",
           "queijo cheddar melt;",
           "cebola caramelizada",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
         ],
       },
 
@@ -184,7 +193,8 @@ const MENU = [
           "cream cheese",
           "bacon",
           "alho frito",
-          "couve crispy"
+          "couve crispy",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
         ],
       },
     ],
@@ -357,6 +367,94 @@ const MENU = [
           "alface americano;",
         ],
       },
+    ],
+  },
+
+
+
+
+  {
+    title: "Burguers Duplos",
+    data: [
+      {
+        id: "4000",
+        title: "Loki Duplo",
+        price: 40.40,
+        description: "Delicioso burguer de carne premium com 2 blends de 140g, pão australiano, queijo cheddar melt, cebola caramelizada e fatias de bacon artesanal.",
+        cover: require("../../assets/products/cover/lokiduplo.jpg"),
+        thumbnail: require("../../assets/products/thumbnail/lokiduplo.jpg"),
+        ingredients: [
+          "Pão australiano;",
+          "2 blend bovino de 140g;",
+          "queijo cheddar melt;",
+          "cebola caramelizada;",
+          "bacon",
+        ],
+      },
+
+
+
+      {
+        id: "4001",
+        title: "Odin Duplo",
+        price: 44.90,
+        description:
+          "Delicioso hambúrguer com 2 blends bovinos de 140 g no pão pretzel caramelizado, molho relish de pepino, tiras de bacon artesanal, mix de queijos muzzarela e prato derretidos, cebola roxa e alface americano.",
+        cover: require("../../assets/products/cover/odinduplo.jpg"),
+        thumbnail: require("../../assets/products/thumbnail/odinduplo.jpg"),
+        ingredients: [
+          "Pão pretzel caramelizado;",
+          "2 blends bovinos de 140 g;",
+          "molho relish de pepino;",
+          "tiras de bacon artesanal;",
+          "Bacon picado;",
+          "mix de queijos muzzarela e prato derretidos;",
+          "cebola roxa;",
+          "alface americano;",
+        ],
+      },
+
+
+      {
+        id: "4002",
+        title: "Loki Duplo Combo",
+        price: 51.20,
+        description: "Delicioso burguer de carne premium com 2 blends de 140g, pão australiano, queijo cheddar melt, cebola caramelizada e fatias de bacon artesanal. Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!! ",
+        cover: require("../../assets/products/cover/lokiduplocombo.jpg"),
+        thumbnail: require("../../assets/products/thumbnail/lokiduplocombo.jpg"),
+        ingredients: [
+          "Pão australiano;",
+          "2 blend bovino de 140g;",
+          "queijo cheddar melt;",
+          "cebola caramelizada;",
+          "bacon",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+        ],
+      },
+
+      {
+        id: "4003",
+        title: "Odin Duplo Combo",
+        price: 53.90,
+        description:
+          "Delicioso hambúrguer com 2 blends bovinos de 140 g no pão pretzel caramelizado, molho relish de pepino, tiras de bacon artesanal, mix de queijos muzzarela e prato derretidos, cebola roxa e alface americano. Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!! ",
+        cover: require("../../assets/products/cover/odinduplocombo.jpg"),
+        thumbnail: require("../../assets/products/thumbnail/odinduplocombo.jpg"),
+        ingredients: [
+          "Pão pretzel caramelizado;",
+          "2 blends bovinos de 140 g;",
+          "molho relish de pepino;",
+          "tiras de bacon artesanal;",
+          "Bacon picado;",
+          "mix de queijos muzzarela e prato derretidos;",
+          "cebola roxa;",
+          "alface americano;",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+        ],
+      },
+
+
+
     ],
   },
 
