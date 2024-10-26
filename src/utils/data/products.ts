@@ -203,13 +203,101 @@ const MENU = [
     title: "Bebidas",
     data: [
       {
-        id: "999",
+        id: "1000",
         title: "Coca Cola lata",
         price: 7.90,
-        thumbnail: require("../../assets/products/thumbnail/999.png"),
-        cover: require("../../assets/products/cover/999.png"),
+        thumbnail: require("../../assets/products/thumbnail/coca.png"),
+        cover: require("../../assets/products/cover/coca.png"),
         description:
           "350ml",
+        ingredients: [],
+      },
+
+      {
+        id: "1001",
+        title: "Coca Cola Zero lata",
+        price: 7.90,
+        thumbnail: require("../../assets/products/thumbnail/cocazero.png"),
+        cover: require("../../assets/products/cover/cocazero.png"),
+        description:
+          "350ml",
+        ingredients: [],
+      },
+
+      {
+        id: "1002",
+        title: "Fanta Laranja lata",
+        price: 7.90,
+        thumbnail: require("../../assets/products/thumbnail/fantal.png"),
+        cover: require("../../assets/products/cover/fantal.png"),
+        description:
+          "350ml",
+        ingredients: [],
+      },
+      
+      {
+        id: "1003",
+        title: "Fanta Uva lata",
+        price: 7.90,
+        thumbnail: require("../../assets/products/thumbnail/fantau.png"),
+        cover: require("../../assets/products/cover/fantau.png"),
+        description:
+          "350ml",
+        ingredients: [],
+      },
+
+      {
+        id: "1004",
+        title: "Guaraná Antártica lata",
+        price: 7.90,
+        thumbnail: require("../../assets/products/thumbnail/guarana.png"),
+        cover: require("../../assets/products/cover/guarana.png"),
+        description:
+          "350ml",
+        ingredients: [],
+      },
+
+      {
+        id: "1005",
+        title: "Guaraná Antártica Zero lata",
+        price: 7.90,
+        thumbnail: require("../../assets/products/thumbnail/guaranazero.png"),
+        cover: require("../../assets/products/cover/guaranazero.png"),
+        description:
+          "350ml",
+        ingredients: [],
+      },
+
+      {
+        id: "1006",
+        title: "Guaravita",
+        price: 5.31,
+        thumbnail: require("../../assets/products/thumbnail/guaravita.jpg"),
+        cover: require("../../assets/products/cover/guaravita.jpg"),
+        description:
+          "350ml",
+        ingredients: [],
+      },
+
+      {
+        id: "1007",
+        title: "Suco Del Valle de Uva lata",
+        price: 8.10,
+        thumbnail: require("../../assets/products/thumbnail/delvaleuva.jpg"),
+        cover: require("../../assets/products/cover/delvaleuva.jpg"),
+        description:
+          "290ml",
+        ingredients: [],
+      },
+
+      {
+        id: "1008",
+        title: "Água sem gás garrafa",
+        price: 4.50,
+        thumbnail: require("../../assets/products/thumbnail/agua.jpg"),
+        cover: require("../../assets/products/cover/agua.jpg"),
+        description:
+          "500ml",
         ingredients: [],
       },
     ],
