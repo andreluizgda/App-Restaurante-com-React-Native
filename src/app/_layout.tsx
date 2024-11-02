@@ -1,28 +1,13 @@
-import {
-  useFonts,
-  Inter_400Regular,
-  Inter_500Medium,
-  Inter_600SemiBold,
-  Inter_700Bold,
-} from "@expo-google-fonts/inter";
+import React from 'react';
 import { Slot } from "expo-router";
 import { SafeAreaView } from "react-native";
 import { ToastProvider } from "react-native-toast-notifications";
 
 export default function Layout() {
-  const [fontsLoaded] = useFonts({
-    Inter_400Regular,
-    Inter_500Medium,
-    Inter_600SemiBold,
-    Inter_700Bold,
-  });
-  if (!fontsLoaded) {
-    return null;
-  }
-
   return (
-    <SafeAreaView className="flex-1 bg-amber-950">
+    <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
       <ToastProvider>
+        {/* Coloque o Slot ou outros componentes que precisem de contexto de toast aqui */}
         <Slot />
       </ToastProvider>
     </SafeAreaView>

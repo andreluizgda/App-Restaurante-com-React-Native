@@ -31,7 +31,7 @@ const MENU = [
           "1x carne (blend da casa) de 180g;",
           "coroa de bacon recheada com cebola;",
           "muçarela derretida e maionese defumada;",
-          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).!",
         ],
       },
       {
@@ -39,7 +39,7 @@ const MENU = [
         title: "Drakkar Combo",
         price: 61.10,
         description:
-          "Delicioso Hamburguer de camarão crocante, molho de maionese especial, alface americano fininho e cobertura de camarão ao alho e azeite no pão brioche. . Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Delicioso Hamburguer de camarão crocante, molho de maionese especial, alface americano fininho e cobertura de camarão ao alho e azeite no pão brioche. . Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         cover: require("../../assets/products/cover/3.png"),
         thumbnail: require("../../assets/products/thumbnail/3.png"),
         ingredients: [
@@ -48,7 +48,7 @@ const MENU = [
           "molho de maionese especial;",
           "Alface americano;",
           "Cobertura de camarão ao alho e azeite;",
-          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         ],
       },
       {
@@ -68,7 +68,7 @@ const MENU = [
           "Picles;",
           "Cebola;",
           "Molho da casa;",
-          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         ],
       },
       {
@@ -76,7 +76,7 @@ const MENU = [
         title: "Ragnar Combo",
         price: 42.20,
         description:
-          "Pão brioche, blend bovino de 180 grs., queijo muçarela empanada, molho de tomate apimentando e manjericão.  Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Pão brioche, blend bovino de 180 grs., queijo muçarela empanada, molho de tomate apimentando e manjericão.  Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         cover: require("../../assets/products/cover/5.png"),
         thumbnail: require("../../assets/products/thumbnail/5.png"),
         ingredients: [
@@ -84,7 +84,7 @@ const MENU = [
           "1x blend bovino de 180 grs;",
           "Queijo muçarela empanada;",
           "Molho de tomate apimentando e manjericão;",
-          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         ],
       },
       {
@@ -92,7 +92,7 @@ const MENU = [
         title: "Meili Combo",
         price: 44.90,
         description:
-          "Delicioso burguer de 180g no pão australiano, queijo gorgonzola derretido, cebola caramelizada, rúcula e geleia de pimenta. Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Delicioso burguer de 180g no pão australiano, queijo gorgonzola derretido, cebola caramelizada, rúcula e geleia de pimenta. Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         cover: require("../../assets/products/cover/6.png"),
         thumbnail: require("../../assets/products/thumbnail/6.png"),
         ingredients: [
@@ -102,7 +102,7 @@ const MENU = [
           "Cebola caramelizada;",
           "Rúcula;",
           "Geleia de pimenta;",
-          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         ],
       },
       {
@@ -117,7 +117,7 @@ const MENU = [
           "Pão brioche;",
           "1x burguer de 140g;",
           "Queijo prato;",
-          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         ],
       },
       {
@@ -125,7 +125,7 @@ const MENU = [
         title: "Freya Combo",
         price: 33.90,
         description:
-          "Pão de brioche, hambúrguer de frango empanado, queijo prato, molho de maionese defumada, cebola roxa, picles e alface americana. Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Pão de brioche, hambúrguer de frango empanado, queijo prato, molho de maionese defumada, cebola roxa, picles e alface americana. Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         cover: require("../../assets/products/cover/8.png"),
         thumbnail: require("../../assets/products/thumbnail/8.png"),
         ingredients: [
@@ -136,7 +136,7 @@ const MENU = [
           "Cebola roxa;",
           "Picles;",
           "Alface americana;",
-          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         ],
       },
       
@@ -145,7 +145,7 @@ const MENU = [
         title: "Odin Duplo Combo",
         price: 51.21,
         description:
-          "Delicioso hambúrguer com 2 blends bovinos de 140 g no pão pretzel caramelizado, molho relish de pepino, tiras de bacon artesanal, mix de queijos muzzarela e prato derretidos, cebola roxa e alface americano. Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Delicioso hambúrguer com 2 blends bovinos de 140 g no pão pretzel caramelizado, molho relish de pepino, tiras de bacon artesanal, mix de queijos muzzarela e prato derretidos, cebola roxa e alface americano. Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         cover: require("../../assets/products/cover/11.png"),
         thumbnail: require("../../assets/products/thumbnail/11.png"),
         ingredients: [
@@ -157,7 +157,7 @@ const MENU = [
           "mix de queijos muzzarela e prato derretidos;",
           "cebola roxa;",
           "alface americano;",
-          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         ],
       },
 
@@ -166,7 +166,7 @@ const MENU = [
         title: "Loki Combo",
         price: 40.40,
         description:
-          "Pão australiano, blend bovino de 180g com queijo cheddar melt e cebola caramelizada. Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Pão australiano, blend bovino de 180g com queijo cheddar melt e cebola caramelizada. Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         cover: require("../../assets/products/cover/lokih.jpg"),
         thumbnail: require("../../assets/products/thumbnail/lokih.jpg"),
         ingredients: [
@@ -174,7 +174,7 @@ const MENU = [
           "blend bovino de 180g;",
           "queijo cheddar melt;",
           "cebola caramelizada",
-          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         ],
       },
 
@@ -183,7 +183,7 @@ const MENU = [
         title: "Vali Combo",
         price: 44.90,
         description:
-        "Saboroso Hambúrguer de blend de costela 180g no pão brioche, molho ranch, cream cheese, bacon picado artesanal, alho frito e couve crispy crocante. Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+        "Saboroso Hambúrguer de blend de costela 180g no pão brioche, molho ranch, cream cheese, bacon picado artesanal, alho frito e couve crispy crocante. Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         cover: require("../../assets/products/cover/valih.jpg"),
         thumbnail: require("../../assets/products/thumbnail/valih.jpg"),
         ingredients: [
@@ -194,7 +194,7 @@ const MENU = [
           "bacon",
           "alho frito",
           "couve crispy",
-          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada). COLOQUE NA ABA DE DESCRIÇÃO SEU COMPLEMENTO!!!",
+          "Acompanha uma porção individual a sua escolha! (Sendo batata frita, batata rústica ou cebola empanada).",
         ],
       },
     ],

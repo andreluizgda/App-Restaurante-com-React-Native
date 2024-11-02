@@ -1,7 +1,7 @@
 import { TextInput, TextInputProps } from "react-native";
 import colors from "tailwindcss/colors";
 
-//Funcao para mexer no Input do Carrinho de pedidos. Aqui definimos cor,borda,etc
+// Função para mexer no Input do Carrinho de pedidos. Aqui definimos cor, borda, etc
 export function Input({ ...rest }: TextInputProps) {
   return (
     <TextInput

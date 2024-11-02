@@ -1,4 +1,3 @@
-import { Feather } from "@expo/vector-icons";
 import { useNavigation } from "expo-router";
 import { useState } from "react";
 import {
@@ -19,7 +18,7 @@ import { Product } from "../components/product";
 import { ProductCartProps, useCartStore } from "../stores/cart-store";
 import { formatCurrency } from "../utils/functions/format-currency";
 
-//Coloque o número do restaurante no Const PHONE_NUMBER PARA O APP FUNCIONAR!! OBS:DEVE CONTER O DDI(Brasil, +55) E O DDD.
+// Coloque o número do restaurante no Const PHONE_NUMBER PARA O APP FUNCIONAR!! OBS: DEVE CONTER O DDI (Brasil, +55).
 
 export default function Cart() {
   const [address, setAddress] = useState("");
@@ -33,6 +32,7 @@ export default function Cart() {
       0
     )
   );
+
   function handleProductRemove(product: ProductCartProps) {
     Alert.alert("Remover", `${product.title} do carrinho?`, [
       {
@@ -48,7 +48,7 @@ export default function Cart() {
 
   function handleOrder() {
     if (address.trim().length === 0) {
-      return Alert.alert("Endereço", "Informe o endereço de entrega !");
+      return Alert.alert("Endereço", "Informe o endereço de entrega!");
     }
     const products = cartStore.products
       .map((product) => `\n ${product.quantity} ${product.title}`)
@@ -60,7 +60,7 @@ export default function Cart() {
     ${products} 
     \n Valor Total : ${total}`;
 
-    toast.show("Pedido enviado com sucesso !", {
+    toast.show("Pedido enviado com sucesso!", {
       type: "success",
       duration: 900,
       placement: "bottom",
@@ -74,8 +74,9 @@ export default function Cart() {
     cartStore.clear();
     navigation.goBack();
   }
+
   function handleRemoveAllProductsInCart() {
-    if(cartStore.products.length === 0){
+    if (cartStore.products.length === 0) {
       Alert.alert("Carrinho vazio", "Seu carrinho já está vazio.");
       return;
     }
@@ -104,35 +105,35 @@ export default function Cart() {
           {cartStore.products.length > 0 ? (
             <View className="p-5 flex-1">
               {cartStore.products.map((product) => (
-                <Product
-                  key={product.id}
-                  data={product}
-                  onPress={() => handleProductRemove(product)}
-                />
+                <Product 
+                  key={product.id} 
+                  data={{ ...product, description: undefined }} 
+                  onPress={() => handleProductRemove(product)} 
+                /> 
               ))}
             </View>
           ) : (
             <View className="items-center m-8">
-              <Feather name="x-circle" size={36} color="white"/>
-              <Text className="font-body text-center text-slate-400 mt-2">
+              <Text style={{ color: 'white', fontSize: 36 }}>❌</Text>
+              <Text className="text-center text-slate-400 mt-2">
                 Seu carrinho está vazio.
               </Text>
             </View>
           )}
-          <View className="flex-row gap-2  justify-between m-3">
+          <View className="flex-row gap-2 justify-between m-3">
             <View className="flex-row items-center">
-              <Text className="text-white text-xl font-subtitle">Total : </Text>
-              <Text className="text-lime-400 text-2xl font-heading">
+              <Text style={{ color: 'white', fontSize: 20 }}>Total :</Text>
+              <Text style={{ color: '#a3e635', fontSize: 35 }}>
                 {total}
               </Text>
             </View>
             <TouchableOpacity onPress={handleRemoveAllProductsInCart}>
-              <Feather name="trash-2" size={24} color="white" />
+              <Text style={{ color: 'white', fontSize: 24 }}>🗑️</Text>
             </TouchableOpacity>
           </View>
 
           <Input
-            placeholder="Informe o endereco de entrega"
+            placeholder="Informe o endereço de entrega"
             blurOnSubmit
             onChangeText={setAddress}
             onSubmitEditing={handleOrder}
@@ -144,11 +145,11 @@ export default function Cart() {
         <Button onPress={handleOrder}>
           <Button.Text>Finalizar Pedido</Button.Text>
           <Button.Icon>
-            <Feather name="arrow-right-circle" size={20} />
+            <Text>➡️</Text>
           </Button.Icon>
         </Button>
         <LinkButton title="Voltar ao cardápio" href="/" />
       </View>
-      </View>
+    </View>
   );
 }

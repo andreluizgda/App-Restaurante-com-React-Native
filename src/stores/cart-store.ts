@@ -3,6 +3,7 @@ import { createJSONStorage, persist } from "zustand/middleware";
 import { ProductProps } from "../utils/data/products";
 import * as cartInMemory from "./helpers/cart-in-memory";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+
 export type ProductCartProps = ProductProps & {
   quantity: number;
 };
