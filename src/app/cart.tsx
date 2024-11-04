@@ -26,7 +26,7 @@ export default function Cart() {
   const [changeRequest, setChangeRequest] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
   const [confirmOrder, setConfirmOrder] = useState(false); 
-  const PHONE_NUMBER = "5521992501768"; //Coloque o número do restaurante no Const PHONE_NUMBER PARA O APP FUNCIONAR!! //OBS:DEVE CONTER O DDI(Brasil, +55) E O DDD.
+  const PHONE_NUMBER = "0000000000000"; //Coloque o número do restaurante no Const PHONE_NUMBER PARA O APP FUNCIONAR!! //OBS:DEVE CONTER O DDI(Brasil, +55) E O DDD.
   const cartStore = useCartStore();
   const navigation = useNavigation();
   const toast = useToast();
