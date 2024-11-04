@@ -1,3 +1,4 @@
+import { Feather } from "@expo/vector-icons";
 import { useNavigation } from "expo-router";
 import { useState } from "react";
 import {
@@ -7,6 +8,8 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Modal,
+  TextInput,
 } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useToast } from "react-native-toast-notifications";
@@ -18,11 +21,12 @@ import { Product } from "../components/product";
 import { ProductCartProps, useCartStore } from "../stores/cart-store";
 import { formatCurrency } from "../utils/functions/format-currency";
 
-// Coloque o número do restaurante no Const PHONE_NUMBER PARA O APP FUNCIONAR!! OBS: DEVE CONTER O DDI (Brasil, +55).
-
 export default function Cart() {
   const [address, setAddress] = useState("");
-  const PHONE_NUMBER = "0000000000000";
+  const [changeRequest, setChangeRequest] = useState("");
+  const [modalVisible, setModalVisible] = useState(false);
+  const [confirmOrder, setConfirmOrder] = useState(false); 
+  const PHONE_NUMBER = "5521992501768"; //Coloque o número do restaurante no Const PHONE_NUMBER PARA O APP FUNCIONAR!! //OBS:DEVE CONTER O DDI(Brasil, +55) E O DDD.
   const cartStore = useCartStore();
   const navigation = useNavigation();
   const toast = useToast();
@@ -50,6 +54,27 @@ export default function Cart() {
     if (address.trim().length === 0) {
       return Alert.alert("Endereço", "Informe o endereço de entrega!");
     }
+
+    Alert.alert(
+      "Deseja fazer alterações no pedido?",
+      "",
+      [
+        {
+          text: "Sim",
+          onPress: () => setModalVisible(true), 
+        },
+        {
+          text: "Não",
+          onPress: () => {
+            sendOrder("Sem alteração"); 
+          },
+        },
+      ],
+      { cancelable: false }
+    );
+  }
+
+  function sendOrder(changeMessage = "") {
     const products = cartStore.products
       .map((product) => `\n ${product.quantity} ${product.title}`)
       .join("");
@@ -58,7 +83,8 @@ export default function Cart() {
      NOVO PEDIDO
      \n Entregar em : ${address}
     ${products} 
-    \n Valor Total : ${total}`;
+    \n Valor Total : ${total}
+    ${changeRequest ? `\n Alterações: ${changeRequest}` : changeMessage}`;
 
     toast.show("Pedido enviado com sucesso!", {
       type: "success",
@@ -105,30 +131,30 @@ export default function Cart() {
           {cartStore.products.length > 0 ? (
             <View className="p-5 flex-1">
               {cartStore.products.map((product) => (
-                <Product 
-                  key={product.id} 
-                  data={{ ...product, description: undefined }} 
-                  onPress={() => handleProductRemove(product)} 
-                /> 
+                <Product
+                  key={product.id}
+                  data={product}
+                  onPress={() => handleProductRemove(product)}
+                />
               ))}
             </View>
           ) : (
             <View className="items-center m-8">
-              <Text style={{ color: 'white', fontSize: 36 }}>❌</Text>
-              <Text className="text-center text-slate-400 mt-2">
+              <Feather name="x-circle" size={36} color="white" />
+              <Text style={{ color: 'slategray', textAlign: 'center', marginTop: 8 }}>
                 Seu carrinho está vazio.
               </Text>
             </View>
           )}
           <View className="flex-row gap-2 justify-between m-3">
             <View className="flex-row items-center">
-              <Text style={{ color: 'white', fontSize: 20 }}>Total :</Text>
-              <Text style={{ color: '#a3e635', fontSize: 35 }}>
+              <Text style={{ color: 'white', fontSize: 20 }}>Total:</Text>
+              <Text style={{ color: 'lime', fontSize: 24 }}>
                 {total}
               </Text>
             </View>
             <TouchableOpacity onPress={handleRemoveAllProductsInCart}>
-              <Text style={{ color: 'white', fontSize: 24 }}>🗑️</Text>
+              <Feather name="trash-2" size={24} color="white" />
             </TouchableOpacity>
           </View>
 
@@ -142,14 +168,45 @@ export default function Cart() {
         </ScrollView>
       </KeyboardAwareScrollView>
       <View className="gap-5 p-5">
-        <Button onPress={handleOrder}>
-          <Button.Text>Finalizar Pedido</Button.Text>
+        <Button onPress={handleOrder} style={{ padding: 12, borderRadius: 8 }}>
+          <Button.Text style={{ fontSize: 18 }}>Finalizar Pedido</Button.Text>
           <Button.Icon>
-            <Text>➡️</Text>
+            <Feather name="arrow-right-circle" size={24} />
           </Button.Icon>
         </Button>
-        <LinkButton title="Voltar ao cardápio" href="/" />
+        <LinkButton title="Voltar ao cardápio" href="/" style={{ padding: 12, borderRadius: 8 }} />
       </View>
+
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => setModalVisible(false)}
+      >
+        <View className="flex-1 justify-center items-center bg-black bg-opacity-50">
+          <View className="bg-white rounded-lg p-5 w-80">
+            <Text style={{ marginBottom: 15 }}>O que deseja alterar no pedido?</Text>
+            <TextInput
+              placeholder="Digite sua alteração aqui"
+              value={changeRequest}
+              onChangeText={setChangeRequest}
+              style={{ borderColor: 'gray', borderWidth: 1, padding: 10, borderRadius: 5, marginBottom: 15 }}
+            />
+            <Button onPress={() => {
+              sendOrder(); 
+              setModalVisible(false); 
+              setChangeRequest("");
+            }}>
+              <Button.Text>Enviar Alteração</Button.Text>
+            </Button>
+            <Button onPress={() => {
+              setModalVisible(false); 
+            }}>
+              <Button.Text>Cancelar</Button.Text>
+            </Button>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }

@@ -12,13 +12,14 @@ export default function Product() {
   const cartStore = useCartStore();
   const navigation = useNavigation();
   const toast = useToast();
-
+  
   const { id } = useLocalSearchParams();
   const product = PRODUCTS.find((item) => item.id === id);
 
   function handleAddToCart() {
     if (product) {
-      cartStore.add(product);
+      const productToAdd = { ...product, quantity: 1 }; // Adiciona a quantidade fixa ao produto
+      cartStore.add(productToAdd); // Adiciona ao carrinho
       toast.show("Produto Adicionado!", {
         type: "success",
         duration: 900,
@@ -28,7 +29,7 @@ export default function Product() {
       navigation.goBack();
     }
   }
-
+  
   if (!product) return <Redirect href="/" />;
 
   return (
@@ -48,15 +49,17 @@ export default function Product() {
           </Text>
         ))}
       </View>
-      <View className="p-5 gap-5 pb-8">
-        <Button onPress={handleAddToCart}>
+
+      <View className="p-5 gap-5 pb-8 flex items-center">
+        <Button onPress={handleAddToCart} className="w-full">
           <Button.Icon>
             <Feather name="plus-circle" size={20} />
           </Button.Icon>
           <Button.Text>Adicionar ao carrinho</Button.Text>
         </Button>
-        <LinkButton title="Voltar ao cardápio" href="/" />
       </View>
+
+      <LinkButton title="Voltar ao cardápio" href="/" />
     </ScrollView>
   );
 }
