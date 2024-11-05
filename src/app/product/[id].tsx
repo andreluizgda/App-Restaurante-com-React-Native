@@ -1,3 +1,4 @@
+// Importa a biblioteca
 import { Feather } from "@expo/vector-icons";
 import { Redirect, useLocalSearchParams, useNavigation } from "expo-router";
 import { Image, Text, View, ScrollView } from "react-native";
@@ -8,14 +9,16 @@ import { useCartStore } from "../../stores/cart-store";
 import { PRODUCTS } from "../../utils/data/products";
 import { formatCurrency } from "../../utils/functions/format-currency";
 
+//Função principal
 export default function Product() {
   const cartStore = useCartStore();
   const navigation = useNavigation();
   const toast = useToast();
-  
+  // Obtém o ID do produto atual da URL para encontrar o produto correto na lista de produtos
   const { id } = useLocalSearchParams();
   const product = PRODUCTS.find((item) => item.id === id);
 
+// Função para adicionar o produto ao carrinho
   function handleAddToCart() {
     if (product) {
       const productToAdd = { ...product, quantity: 1 }; // Adiciona a quantidade fixa ao produto
@@ -26,10 +29,10 @@ export default function Product() {
         placement: "bottom",
         animationType: "zoom-in",
       });
-      navigation.goBack();
+      navigation.goBack(); // Volta para a página anterior
     }
   }
-  
+  // Redireciona para a página inicial caso o produto não seja encontrado
   if (!product) return <Redirect href="/" />;
 
   return (

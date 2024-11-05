@@ -1,16 +1,9 @@
+// Importa a biblioteca
 import { Feather } from "@expo/vector-icons";
 import { useNavigation } from "expo-router";
 import { useState } from "react";
-import {
-  Alert,
-  Linking,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  View,
-  Modal,
-  TextInput,
-} from "react-native";
+import { Alert, Linking, ScrollView, Text, TouchableOpacity, View, 
+  Modal,TextInput,} from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useToast } from "react-native-toast-notifications";
 import { Button } from "../components/button";
@@ -21,15 +14,23 @@ import { Product } from "../components/product";
 import { ProductCartProps, useCartStore } from "../stores/cart-store";
 import { formatCurrency } from "../utils/functions/format-currency";
 
+// Função principal do componente Cart
 export default function Cart() {
+// Declara estados locais para armazenar o endereço, pedido de alteração e status do modal
   const [address, setAddress] = useState("");
   const [changeRequest, setChangeRequest] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
-  const [confirmOrder, setConfirmOrder] = useState(false); 
-  const PHONE_NUMBER = "0000000000000"; //Coloque o número do restaurante no Const PHONE_NUMBER PARA O APP FUNCIONAR!! //OBS:DEVE CONTER O DDI(Brasil, +55) E O DDD.
+
+  // Define o número de telefone do restaurante para envio do pedido
+  const PHONE_NUMBER = "0000000000000"; 
+  //Coloque o número do restaurante no Const PHONE_NUMBER PARA O APP FUNCIONAR!! 
+  //OBS:DEVE CONTER O DDI(Brasil, +55) E O DDD.
+  
   const cartStore = useCartStore();
   const navigation = useNavigation();
   const toast = useToast();
+
+// Calcula o valor total do pedido somando preço e quantidade dos itens no carrinho
   const total = formatCurrency(
     cartStore.products.reduce(
       (acc, product) => acc + product.price * product.quantity,
@@ -37,6 +38,7 @@ export default function Cart() {
     )
   );
 
+// Função para remover um produto específico do carrinho
   function handleProductRemove(product: ProductCartProps) {
     Alert.alert("Remover", `${product.title} do carrinho?`, [
       {
@@ -50,6 +52,7 @@ export default function Cart() {
     ]);
   }
 
+// Função para finalizar o pedido, abrindo alerta para confirmação e opção de alterações
   function handleOrder() {
     if (address.trim().length === 0) {
       return Alert.alert("Endereço", "Informe o endereço de entrega!");
@@ -61,12 +64,12 @@ export default function Cart() {
       [
         {
           text: "Sim",
-          onPress: () => setModalVisible(true), 
+          onPress: () => setModalVisible(true), // Exibe modal para alteração do pedido
         },
         {
           text: "Não",
           onPress: () => {
-            sendOrder("Sem alteração"); 
+            sendOrder("Sem alteração"); // Envia o pedido sem alterações
           },
         },
       ],
@@ -74,6 +77,7 @@ export default function Cart() {
     );
   }
 
+// Função que envia o pedido para o WhatsApp com as informações do cliente
   function sendOrder(changeMessage = "") {
     const products = cartStore.products
       .map((product) => `\n ${product.quantity} ${product.title}`)
@@ -92,7 +96,7 @@ export default function Cart() {
       placement: "bottom",
       animationType: "slide-in",
     });
-
+    // Abre o WhatsApp com a mensagem formatada e limpa o carrinho após o envio
     Linking.openURL(
       `http://api.whatsapp.com/send?phone=${PHONE_NUMBER}&text=${message}`
     );
@@ -101,6 +105,7 @@ export default function Cart() {
     navigation.goBack();
   }
 
+// Função para remover todos os produtos do carrinho, com alerta de confirmação
   function handleRemoveAllProductsInCart() {
     if (cartStore.products.length === 0) {
       Alert.alert("Carrinho vazio", "Seu carrinho já está vazio.");

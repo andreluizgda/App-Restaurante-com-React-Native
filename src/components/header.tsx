@@ -1,3 +1,4 @@
+// Importa os componentes e bibliotecas necessários do React Native e Expo Router
 import { View, Image, Text, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import colors from "tailwindcss/colors";

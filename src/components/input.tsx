@@ -1,3 +1,4 @@
+// Importa o componente TextInput e suas propriedades do React Native
 import { TextInput, TextInputProps } from "react-native";
 import colors from "tailwindcss/colors";
 

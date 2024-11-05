@@ -1,3 +1,4 @@
+// Importa a biblioteca
 import { View, Text, FlatList, SectionList } from "react-native";
 import { Header } from "../components/header";
 import { CategoryButton } from "../components/category-button";
@@ -7,6 +8,7 @@ import { Product } from "../components/product";
 import { Link } from "expo-router";
 import { useCartStore } from "../stores/cart-store";
 
+//Função principal
 export default function Home() {
   const [category, setCategory] = useState(CATEGORIES[0]);
   const cartStore = useCartStore();

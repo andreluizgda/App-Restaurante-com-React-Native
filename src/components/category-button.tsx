@@ -1,8 +1,9 @@
+// Importa os componentes Pressable e Text do React Native e a biblioteca clsx
 import { Pressable, PressableProps, Text } from "react-native";
 import clsx from "clsx";
 
 type CategoryButtonProps = PressableProps & {
-  title: string
+  title: string // Título do botão
   isSelected?: boolean
 }
 

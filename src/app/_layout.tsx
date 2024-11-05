@@ -1,3 +1,4 @@
+// Importa a biblioteca
 import React from 'react';
 import { Slot } from "expo-router";
 import { SafeAreaView } from "react-native";
