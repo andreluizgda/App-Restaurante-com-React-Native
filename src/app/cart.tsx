@@ -2,7 +2,7 @@
 import { Feather } from "@expo/vector-icons";
 import { useNavigation } from "expo-router";
 import { useState } from "react";
-import { Alert, Linking, ScrollView, Text, TouchableOpacity, View, 
+import { Alert, Linking, ScrollView, Text, TouchableOpacity, View,
   Modal,TextInput,} from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useToast } from "react-native-toast-notifications";
@@ -198,14 +198,14 @@ export default function Cart() {
               style={{ borderColor: 'gray', borderWidth: 1, padding: 10, borderRadius: 5, marginBottom: 15 }}
             />
             <Button onPress={() => {
-              sendOrder(); 
-              setModalVisible(false); 
+              sendOrder();
+              setModalVisible(false);
               setChangeRequest("");
             }}>
               <Button.Text>Enviar Alteração</Button.Text>
             </Button>
             <Button onPress={() => {
-              setModalVisible(false); 
+              setModalVisible(false);
             }}>
               <Button.Text>Cancelar</Button.Text>
             </Button>
