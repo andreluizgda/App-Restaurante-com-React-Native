@@ -1,5 +1,25 @@
-# App-Restaurante-com-React-Native
- Aplicativo mobile que permite realizar pedidos em restaurantes integrado com Whatsapp. Nesse projeto foi utilizado TypeScript, React Native, React, Tailwind CSS e Expo
+# App Restaurante com React Native  
+
+Aplicativo mobile que permite realizar pedidos em restaurantes, com integração ao WhatsApp. O projeto oferece uma interface moderna e intuitiva, facilitando o processo de escolha e envio de pedidos diretamente ao restaurante.  
+
+## Tecnologias Utilizadas  
+- **TypeScript**  
+- **React Native**  
+- **React**  
+- **Tailwind CSS**  
+- **Expo**
+
+## Funcionalidades  
+- **Catálogo de Produtos**: Visualização dos itens disponíveis no restaurante.  
+- **Carrinho de Compras**: Adicione e remova itens com facilidade.  
+- **Integração com WhatsApp**: Finalize seu pedido diretamente no WhatsApp, garantindo agilidade e praticidade.  
+- **Interface Responsiva**: Design otimizado para diversos dispositivos móveis.  
+
+## Pré-requisitos  
+Antes de executar o projeto, certifique-se de ter instalado:  
+- **Node.js**  
+- **Expo CLI**  
+- **Git**
 
 ## Colaboradores
 
@@ -42,3 +62,21 @@
     </td>
   </tr>
 </table>
+
+## Como Executar o Projeto  
+1. Clone este repositório:  
+   ```bash
+   $git clone https://github.com/SeuUsuario/App-Restaurante-com-React-Native.git
+2. Navegue até o diretório do projeto:
+   ```bash 
+   $cd App-Restaurante-com-React-Native
+3. Instale as dependências:
+   ```bash 
+   $npm install
+4. Inicie o projeto no Expo:
+   ```bash 
+   $npx expo start
+5. Para iniciar com o túnel, permitindo que você acesse o aplicativo remotamente em diferentes redes, use: 
+    ```bash
+    $npx expo start --tunnel pode usarr como outra acesso
+6. Escaneie o QR Code com o aplicativo Expo Go no seu dispositivo móvel.
