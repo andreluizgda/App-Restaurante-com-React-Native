@@ -1,5 +1,6 @@
 // Importa componentes do React Native
 import { TouchableOpacity, TouchableOpacityProps, Text } from "react-native";
+import React from 'react';
 
 type ButtonProps = TouchableOpacityProps & {
   children: React.ReactNode;
