@@ -1,8 +1,10 @@
+// Teste unitario do button text presente no button.tsx, para checar se o texto renderiza no componente
+
 import React from 'react';
 import { render } from '@testing-library/react-native';
 import { Text } from 'react-native';
 
-// Definindo o componente ButtonText diretamente no arquivo de teste, pois tentar importar do button.tsx o jest nao reconhece
+// Definindo a funcao ButtonText diretamente no arquivo de teste, pois se tentar importar do arquivo button, o Jest nao reconhece
 interface ButtonTextProps {
   children: React.ReactNode;
 }
